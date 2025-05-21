@@ -1,0 +1,211 @@
+{
+  "common": {
+    "appName": "Wiki de Creadores de Contenido",
+    "search": "Buscar",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "notFound": "No encontrado",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "submit": "Enviar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "viewAll": "Ver Todo",
+    "followers": "seguidores",
+    "following": "siguiendo",
+    "joinedOn": "Se unió el"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "creators": "Creadores",
+    "events": "Eventos",
+    "collaborations": "Colaboraciones",
+    "settings": "Configuración",
+    "signIn": "Iniciar Sesión",
+    "signOut": "Cerrar Sesión"
+  },
+  "regions": {
+    "western": "Occidental",
+    "africa": "África",
+    "asia": "Asia",
+    "middleEast": "Medio Oriente",
+    "northAmerica": "América del Norte",
+    "europe": "Europa",
+    "southAmerica": "América del Sur",
+    "oceania": "Oceanía"
+  },
+  "platforms": {
+    "youtube": "YouTube",
+    "twitch": "Twitch",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "tiktok": "TikTok",
+    "facebook": "Facebook"
+  },
+  "home": {
+    "title": "Wiki de Creadores de Contenido",
+    "subtitle": "Descubre y explora creadores digitales de todo el mundo",
+    "searchPlaceholder": "Buscar por nombre, país o plataforma...",
+    "filters": "Filtros",
+    "featuredCreators": "Creadores Destacados",
+    "upcomingEvents": "Próximos Eventos",
+    "recentlyAdded": "Añadidos Recientemente",
+    "creatorsAttending": "creadores asistiendo",
+    "viewAllCreators": "Ver Todos los Creadores",
+    "viewAllEvents": "Ver Todos los Eventos"
+  },
+  "creators": {
+    "title": "Directorio de Creadores",
+    "subtitle": "Navega y descubre creadores de contenido de todo el mundo",
+    "searchPlaceholder": "Buscar creadores...",
+    "filters": "Filtros",
+    "sortBy": "Ordenar por",
+    "sortOptions": {
+      "newest": "Más Recientes",
+      "oldest": "Más Antiguos",
+      "followersHigh": "Más Seguidores",
+      "followersLow": "Menos Seguidores"
+    },
+    "filterCategories": {
+      "regions": "Regiones",
+      "platforms": "Plataformas",
+      "contentCategories": "Categorías de Contenido"
+    },
+    "contentCategories": {
+      "tech": "Tecnología",
+      "gaming": "Videojuegos",
+      "beauty": "Belleza y Estilo de Vida",
+      "cooking": "Cocina y Comida",
+      "music": "Música y Artes"
+    },
+    "applyFilters": "Aplicar Filtros"
+  },
+  "creatorProfile": {
+    "about": "Acerca de",
+    "events": "Eventos",
+    "collaborations": "Colaboraciones",
+    "comments": "Comentarios",
+    "socialPlatforms": "Plataformas Sociales",
+    "topic": "Tema",
+    "eventsParticipated": "Eventos en los que ha participado",
+    "collaboratedWith": "Creadores con los que ha colaborado",
+    "communityFeedback": "Comentarios y discusiones de la comunidad",
+    "addComment": "Añadir un comentario...",
+    "postComment": "Publicar Comentario",
+    "viewAllComments": "Ver Todos los Comentarios",
+    "viewAllEvents": "Ver Todos los Eventos",
+    "viewAllCollaborations": "Ver Todas las Colaboraciones",
+    "collaborationNetwork": "Red de Colaboración",
+    "networkVisualization": "Visualización de red próximamente",
+    "followOn": "Seguir en",
+    "from": "De",
+    "reply": "Responder"
+  },
+  "events": {
+    "title": "Eventos de Creadores",
+    "subtitle": "Descubre eventos pasados y futuros para creadores de contenido de todo el mundo",
+    "searchPlaceholder": "Buscar eventos...",
+    "upcomingEvents": "Próximos Eventos",
+    "pastEvents": "Eventos Pasados",
+    "calendarView": "Vista de Calendario",
+    "filters": "Filtros",
+    "filterCategories": {
+      "eventType": "Tipo de Evento",
+      "regions": "Regiones",
+      "dateRange": "Rango de Fechas"
+    },
+    "eventTypes": {
+      "conference": "Conferencia",
+      "summit": "Cumbre",
+      "expo": "Exposición",
+      "festival": "Festival",
+      "workshop": "Taller"
+    },
+    "dateRange": {
+      "from": "Desde",
+      "to": "Hasta"
+    },
+    "sortOptions": {
+      "dateAsc": "Fecha (Más Próxima)",
+      "dateDesc": "Fecha (Más Lejana)",
+      "attendeesHigh": "Más Asistentes",
+      "attendeesLow": "Menos Asistentes"
+    },
+    "creatorsAttending": "creadores asistiendo",
+    "calendarComingSoon": "Vista de calendario próximamente",
+    "pastEventsComingSoon": "Los eventos pasados se mostrarán aquí",
+    "applyFilters": "Aplicar Filtros"
+  },
+  "collaborations": {
+    "title": "Colaboraciones de Creadores",
+    "subtitle": "Explora colaboraciones entre creadores de contenido y descubre nuevas conexiones",
+    "searchPlaceholder": "Buscar colaboraciones...",
+    "topCollaborations": "Colaboraciones Principales",
+    "collaborationNetwork": "Red de Colaboración",
+    "networkDescription": "Representación visual de colaboraciones entre creadores",
+    "networkVisualization": "Visualización interactiva de red próximamente",
+    "filters": "Filtros",
+    "filterCategories": {
+      "regions": "Regiones",
+      "contentCategories": "Categorías de Contenido",
+      "collaborationCount": "Número de Colaboraciones"
+    },
+    "collaborationCount": {
+      "low": "1-5 colaboraciones",
+      "medium": "6-10 colaboraciones",
+      "high": "10+ colaboraciones"
+    },
+    "sortOptions": {
+      "countDesc": "Más Colaboraciones",
+      "countAsc": "Menos Colaboraciones",
+      "recent": "Más Recientes",
+      "oldest": "Más Antiguas"
+    },
+    "collaborations": "colaboraciones",
+    "latestProject": "Último proyecto",
+    "viewCollaborationDetails": "Ver Detalles de Colaboración",
+    "applyFilters": "Aplicar Filtros"
+  },
+  "settings": {
+    "title": "Configuración",
+    "subtitle": "Administra tu cuenta y preferencias",
+    "language": "Idioma",
+    "languagePreference": "Preferencia de Idioma",
+    "languageDescription": "Selecciona tu idioma preferido para la Wiki de Creadores de Contenido",
+    "languages": {
+      "en": "Inglés (English)",
+      "es": "Español",
+      "fr": "Francés (Français)",
+      "pt": "Portugués (Português)",
+      "it": "Italiano (Italiano)",
+      "auto": "Detección automática (Basado en ubicación)"
+    },
+    "theme": "Tema",
+    "themePreference": "Preferencia de Tema",
+    "themeDescription": "Elige tu tema preferido para la Wiki de Creadores de Contenido",
+    "themes": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "system": "Sistema"
+    },
+    "notifications": "Notificaciones",
+    "notificationPreferences": "Preferencias de Notificación",
+    "notificationDescription": "Administra tus configuraciones de notificación",
+    "notificationTypes": {
+      "newCollaborations": "Nuevas colaboraciones",
+      "upcomingEvents": "Próximos eventos",
+      "creatorUpdates": "Actualizaciones de creadores",
+      "mentions": "Menciones y respuestas"
+    },
+    "account": "Cuenta",
+    "accountSettings": "Configuración de Cuenta",
+    "accountDescription": "Administra la información de tu cuenta",
+    "profile": "Perfil",
+    "privacy": "Privacidad",
+    "security": "Seguridad",
+    "saveChanges": "Guardar Cambios",
+    "resetDefaults": "Restablecer Valores Predeterminados"
+  }
+}

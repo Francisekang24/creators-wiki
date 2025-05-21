@@ -1,0 +1,211 @@
+{
+  "common": {
+    "appName": "Content Creators Wiki",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Not found",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "submit": "Submit",
+    "next": "Next",
+    "previous": "Previous",
+    "viewAll": "View All",
+    "followers": "followers",
+    "following": "following",
+    "joinedOn": "Joined on"
+  },
+  "navigation": {
+    "home": "Home",
+    "creators": "Creators",
+    "events": "Events",
+    "collaborations": "Collaborations",
+    "settings": "Settings",
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "regions": {
+    "western": "Western",
+    "africa": "Africa",
+    "asia": "Asia",
+    "middleEast": "Middle East",
+    "northAmerica": "North America",
+    "europe": "Europe",
+    "southAmerica": "South America",
+    "oceania": "Oceania"
+  },
+  "platforms": {
+    "youtube": "YouTube",
+    "twitch": "Twitch",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "tiktok": "TikTok",
+    "facebook": "Facebook"
+  },
+  "home": {
+    "title": "Content Creators Wiki",
+    "subtitle": "Discover and explore digital creators from around the world",
+    "searchPlaceholder": "Search by name, country, or platform...",
+    "filters": "Filters",
+    "featuredCreators": "Featured Creators",
+    "upcomingEvents": "Upcoming Events",
+    "recentlyAdded": "Recently Added",
+    "creatorsAttending": "creators attending",
+    "viewAllCreators": "View All Creators",
+    "viewAllEvents": "View All Events"
+  },
+  "creators": {
+    "title": "Creators Directory",
+    "subtitle": "Browse and discover content creators from around the world",
+    "searchPlaceholder": "Search creators...",
+    "filters": "Filters",
+    "sortBy": "Sort by",
+    "sortOptions": {
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "followersHigh": "Most Followers",
+      "followersLow": "Least Followers"
+    },
+    "filterCategories": {
+      "regions": "Regions",
+      "platforms": "Platforms",
+      "contentCategories": "Content Categories"
+    },
+    "contentCategories": {
+      "tech": "Tech",
+      "gaming": "Gaming",
+      "beauty": "Beauty & Lifestyle",
+      "cooking": "Cooking & Food",
+      "music": "Music & Arts"
+    },
+    "applyFilters": "Apply Filters"
+  },
+  "creatorProfile": {
+    "about": "About",
+    "events": "Events",
+    "collaborations": "Collaborations",
+    "comments": "Comments",
+    "socialPlatforms": "Social Platforms",
+    "topic": "Topic",
+    "eventsParticipated": "Events participated in",
+    "collaboratedWith": "Creators collaborated with",
+    "communityFeedback": "Community feedback and discussions",
+    "addComment": "Add a comment...",
+    "postComment": "Post Comment",
+    "viewAllComments": "View All Comments",
+    "viewAllEvents": "View All Events",
+    "viewAllCollaborations": "View All Collaborations",
+    "collaborationNetwork": "Collaboration Network",
+    "networkVisualization": "Network visualization coming soon",
+    "followOn": "Follow on",
+    "from": "From",
+    "reply": "Reply"
+  },
+  "events": {
+    "title": "Creator Events",
+    "subtitle": "Discover upcoming and past events for content creators around the world",
+    "searchPlaceholder": "Search events...",
+    "upcomingEvents": "Upcoming Events",
+    "pastEvents": "Past Events",
+    "calendarView": "Calendar View",
+    "filters": "Filters",
+    "filterCategories": {
+      "eventType": "Event Type",
+      "regions": "Regions",
+      "dateRange": "Date Range"
+    },
+    "eventTypes": {
+      "conference": "Conference",
+      "summit": "Summit",
+      "expo": "Expo",
+      "festival": "Festival",
+      "workshop": "Workshop"
+    },
+    "dateRange": {
+      "from": "From",
+      "to": "To"
+    },
+    "sortOptions": {
+      "dateAsc": "Date (Soonest)",
+      "dateDesc": "Date (Latest)",
+      "attendeesHigh": "Most Attendees",
+      "attendeesLow": "Least Attendees"
+    },
+    "creatorsAttending": "creators attending",
+    "calendarComingSoon": "Calendar view coming soon",
+    "pastEventsComingSoon": "Past events will be displayed here",
+    "applyFilters": "Apply Filters"
+  },
+  "collaborations": {
+    "title": "Creator Collaborations",
+    "subtitle": "Explore collaborations between content creators and discover new connections",
+    "searchPlaceholder": "Search collaborations...",
+    "topCollaborations": "Top Collaborations",
+    "collaborationNetwork": "Collaboration Network",
+    "networkDescription": "Visual representation of creator collaborations",
+    "networkVisualization": "Interactive network visualization coming soon",
+    "filters": "Filters",
+    "filterCategories": {
+      "regions": "Regions",
+      "contentCategories": "Content Categories",
+      "collaborationCount": "Collaboration Count"
+    },
+    "collaborationCount": {
+      "low": "1-5 collaborations",
+      "medium": "6-10 collaborations",
+      "high": "10+ collaborations"
+    },
+    "sortOptions": {
+      "countDesc": "Most Collaborations",
+      "countAsc": "Least Collaborations",
+      "recent": "Most Recent",
+      "oldest": "Oldest First"
+    },
+    "collaborations": "collaborations",
+    "latestProject": "Latest project",
+    "viewCollaborationDetails": "View Collaboration Details",
+    "applyFilters": "Apply Filters"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account and preferences",
+    "language": "Language",
+    "languagePreference": "Language Preference",
+    "languageDescription": "Select your preferred language for the Content Creators Wiki",
+    "languages": {
+      "en": "English",
+      "es": "Spanish (Español)",
+      "fr": "French (Français)",
+      "pt": "Portuguese (Português)",
+      "it": "Italian (Italiano)",
+      "auto": "Auto-detect (Based on location)"
+    },
+    "theme": "Theme",
+    "themePreference": "Theme Preference",
+    "themeDescription": "Choose your preferred theme for the Content Creators Wiki",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "notifications": "Notifications",
+    "notificationPreferences": "Notification Preferences",
+    "notificationDescription": "Manage your notification settings",
+    "notificationTypes": {
+      "newCollaborations": "New collaborations",
+      "upcomingEvents": "Upcoming events",
+      "creatorUpdates": "Creator updates",
+      "mentions": "Mentions and replies"
+    },
+    "account": "Account",
+    "accountSettings": "Account Settings",
+    "accountDescription": "Manage your account information",
+    "profile": "Profile",
+    "privacy": "Privacy",
+    "security": "Security",
+    "saveChanges": "Save Changes",
+    "resetDefaults": "Reset to Defaults"
+  }
+}
