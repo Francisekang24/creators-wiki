@@ -1,3 +1,5 @@
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -6,105 +8,195 @@ import { Badge } from "@/components/ui/badge"
 import { Search, Filter, Globe, Youtube, Twitch, Instagram } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import Header from "@/components/Header"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	// Mock data for featured creators
+	const featuredCreators = [
+		{
+			id: 1,
+			name: "Alex Johnson",
+			username: "alexcreates",
+			avatar: "/placeholder.svg?height=100&width=100",
+			country: "United States",
+			mainPlatform: "youtube",
+			followers: "2.5M",
+			tags: ["Tech", "Reviews", "Tutorials"],
+		},
+		{
+			id: 2,
+			name: "Nala Osei",
+			username: "nalabeauty",
+			avatar: "/placeholder.svg?height=100&width=100",
+			country: "Ghana",
+			mainPlatform: "instagram",
+			followers: "1.2M",
+			tags: ["Beauty", "Lifestyle", "Fashion"],
+		},
+		{
+			id: 3,
+			name: "Carlos Rivera",
+			username: "carlosgaming",
+			avatar: "/placeholder.svg?height=100&width=100",
+			country: "Mexico",
+			mainPlatform: "twitch",
+			followers: "800K",
+			tags: ["Gaming", "Esports", "Commentary"],
+		},
+		{
+			id: 4,
+			name: "Sarah Kim",
+			username: "sarahcooks",
+			avatar: "/placeholder.svg?height=100&width=100",
+			country: "South Korea",
+			mainPlatform: "youtube",
+			followers: "3.1M",
+			tags: ["Cooking", "Travel", "Vlogs"],
+		},
+	]
+
+	// Mock data for upcoming events
+	const upcomingEvents = [
+		{
+			id: 1,
+			name: "Creator Summit 2025",
+			date: "June 15-18, 2025",
+			location: "Los Angeles, CA",
+			attendees: 42,
+		},
+		{
+			id: 2,
+			name: "African Content Festival",
+			date: "July 22-24, 2025",
+			location: "Lagos, Nigeria",
+			attendees: 28,
+		},
+		{
+			id: 3,
+			name: "Digital Creators Conference",
+			date: "August 5-7, 2025",
+			location: "London, UK",
+			attendees: 35,
+		},
+	]
+
+	const getPlatformIcon = (platform: string) => {
+		switch (platform) {
+			case "youtube":
+				return <Youtube className="h-4 w-4 text-red-500" />
+			case "twitch":
+				return <Twitch className="h-4 w-4 text-purple-500" />
+			case "instagram":
+				return <Instagram className="h-4 w-4 text-pink-500" />
+			default:
+				return <Globe className="h-4 w-4" />
+		}
+	}
+
+	return (
+
+				<div className="flex flex-col gap-4 h-screen py-2">
+					<Header 
+						title="Content Creators Wiki" 
+						description="Discover and explore digital creators from around the world" 
+					/>
+					<main className="flex-1">
+						<div className="flex flex-col gap-4 md:flex-row">
+							<div className="relative flex-1">
+								<Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+								<Input placeholder="Search by name, country, or platform..." className="pl-9" />
+							</div>
+							<Button variant="outline" className="gap-2">
+								<Filter className="h-4 w-4" />
+								<span>Filters</span>
+							</Button>
+							<Button>
+								<span>Search</span>
+							</Button>
+						</div>
+						<div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-5">
+							{featuredCreators.map((creator) => (
+								<Link href={`/creators/${creator.id}`} key={creator.id}>
+									<Card className="h-full overflow-hidden transition-all hover:shadow-md">
+										<CardHeader className="p-4">
+											<div className="flex items-center gap-3">
+												<div className="relative h-12 w-12 overflow-hidden rounded-full">
+													<Image
+														src={creator.avatar || "/placeholder.svg"}
+														alt={creator.name}
+														fill
+														className="object-cover"
+													/>
+												</div>
+												<div>
+													<CardTitle className="text-base">{creator.name}</CardTitle>
+													<CardDescription>@{creator.username}</CardDescription>
+												</div>
+											</div>
+										</CardHeader>
+										<CardContent className="p-4 pt-0">
+											<div className="flex items-center gap-2 text-sm text-muted-foreground">
+												<Globe className="h-4 w-4" />
+												<span>{creator.country}</span>
+											</div>
+											<div className="mt-2 flex items-center gap-2">
+												{getPlatformIcon(creator.mainPlatform)}
+												<span className="text-sm font-medium">{creator.followers} followers</span>
+											</div>
+										</CardContent>
+										<CardFooter className="flex flex-wrap gap-2 p-4 pt-0">
+											{creator.tags.map((tag) => (
+												<Badge key={tag} variant="secondary" className="text-xs">
+													{tag}
+												</Badge>
+											))}
+										</CardFooter>
+									</Card>
+								</Link>
+							))}
+						</div>
+						<div className="mt-4 flex justify-center">
+							<Button variant="outline" asChild>
+								<Link href="/creators">View All Creators</Link>
+							</Button>
+						</div>
+						<div className="grid gap-4 md:grid-cols-3 mt-5">
+							{upcomingEvents.map((event) => (
+								<Link href={`/events/${event.id}`} key={event.id}>
+									<Card className="h-full transition-all hover:shadow-md">
+										<CardHeader>
+											<CardTitle className="text-xl">{event.name}</CardTitle>
+											<CardDescription>{event.date}</CardDescription>
+										</CardHeader>
+										<CardContent>
+											<div className="flex items-center gap-2 text-sm text-muted-foreground">
+												<Globe className="h-4 w-4" />
+												<span>{event.location}</span>
+											</div>
+											<div className="mt-2 text-sm">
+												<span>{event.attendees} creators attending</span>
+											</div>
+										</CardContent>
+										<CardFooter>
+											<Button variant="outline" size="sm" className="w-full">
+												View Details
+											</Button>
+										</CardFooter>
+									</Card>
+								</Link>
+							))}
+						</div>
+						<div className="mt-4 flex justify-center mb-2">
+							<Button variant="outline" asChild>
+								<Link href="/events">View All Events</Link>
+							</Button>
+						</div>
+					</main>
+					<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+
+					</footer>
+				</div>
+	);
 }
+

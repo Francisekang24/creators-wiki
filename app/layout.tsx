@@ -3,11 +3,11 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { SidebarProvider } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/app-sidebar"
 import { getDictionary } from "@/lib/i18n"
 import { LanguageProvider } from "@/components/language-provider"
 import type { Locale } from "@/lib/i18n/types"
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -33,14 +33,14 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <LanguageProvider initialDictionary={dictionary} initialLocale={locale}>
             <SidebarProvider>
-              <div className="flex min-h-screen">
-                <AppSidebar />
-                <main className="flex-1 overflow-auto">{children}</main>
-              </div>
+              <AppSidebar />
+              <SidebarInset className="px-4 md:px-6 lg:px-8 mt-2">
+                {children}
+              </SidebarInset>
             </SidebarProvider>
           </LanguageProvider>
         </ThemeProvider>
-      </body>
-    </html>
+      </body >
+    </html >
   )
 }
