@@ -8,97 +8,14 @@ import { Globe, Youtube, Twitch, Instagram, Twitter, Calendar, MapPin, Flag } fr
 import Link from "next/link"
 import Image from "next/image"
 
+import { creators } from "@/lib/mockData"
+
 export default function CreatorProfilePage({ params }: { params: { id: string } }) {
-    // This would normally be fetched from a database
-    const creator = {
-        id: params.id,
-        name: "Alex Johnson",
-        username: "alexcreates",
-        avatar: "/placeholder.svg?height=200&width=200",
-        coverImage: "/placeholder.svg?height=400&width=1200",
-        bio: "Tech enthusiast and content creator focused on gadget reviews, tutorials, and tech news. Based in San Francisco, creating content since 2018.",
-        country: "United States",
-        flag: "🇺🇸",
-        mainPlatform: "youtube",
-        mainPlatformUrl: "https://youtube.com/alexcreates",
-        followers: "2.5M",
-        joined: "March 2018",
-        tags: ["Tech", "Reviews", "Tutorials", "Gadgets", "Unboxing"],
-        socialLinks: [
-            { platform: "youtube", url: "https://youtube.com/alexcreates", followers: "2.5M" },
-            { platform: "twitter", url: "https://twitter.com/alexcreates", followers: "450K" },
-            { platform: "instagram", url: "https://instagram.com/alexcreates", followers: "780K" },
-            { platform: "twitch", url: "https://twitch.tv/alexcreates", followers: "120K" },
-        ],
-        events: [
-            {
-                id: "1",
-                name: "TechCon 2024",
-                date: "April 15-17, 2024",
-                location: "San Francisco, CA",
-                role: "Speaker",
-                topic: "The Future of Tech Content Creation",
-            },
-            {
-                id: "2",
-                name: "Creator Summit",
-                date: "June 22-24, 2024",
-                location: "Los Angeles, CA",
-                role: "Panelist",
-                topic: "Monetization Strategies for Tech Creators",
-            },
-            {
-                id: "3",
-                name: "VidCon 2023",
-                date: "July 10-13, 2023",
-                location: "Anaheim, CA",
-                role: "Attendee",
-                topic: "",
-            },
-        ],
-        collaborations: [
-            { id: "1", name: "Sarah Kim", username: "sarahcooks", avatar: "/placeholder.svg?height=50&width=50", count: 12 },
-            { id: "2", name: "David Chen", username: "davidfilms", avatar: "/placeholder.svg?height=50&width=50", count: 8 },
-            {
-                id: "3",
-                name: "Priya Sharma",
-                username: "priyamusic",
-                avatar: "/placeholder.svg?height=50&width=50",
-                count: 5,
-            },
-            {
-                id: "4",
-                name: "Carlos Rivera",
-                username: "carlosgaming",
-                avatar: "/placeholder.svg?height=50&width=50",
-                count: 3,
-            },
-        ],
-        comments: [
-            {
-                id: "1",
-                user: { name: "TechFan22", avatar: "/placeholder.svg?height=40&width=40" },
-                content:
-                    "Your camera comparison video was super helpful! Ended up buying the Sony based on your recommendations.",
-                date: "2 days ago",
-                likes: 24,
-            },
-            {
-                id: "2",
-                user: { name: "CreatorSupport", avatar: "/placeholder.svg?height=40&width=40" },
-                content: "Love your content! Would you be interested in collaborating on a video about content creation tools?",
-                date: "1 week ago",
-                likes: 18,
-            },
-            {
-                id: "3",
-                user: { name: "NewToTech", avatar: "/placeholder.svg?height=40&width=40" },
-                content:
-                    "Your beginner's guide to video editing saved me so much time. Thank you for making complex topics so accessible!",
-                date: "2 weeks ago",
-                likes: 42,
-            },
-        ],
+
+    // Find the creator by ID
+    const creator = creators.find((creator) => creator.id === params.id)
+    if (!creator) {
+        return <div className="container mx-auto py-6">Creator not found</div>
     }
 
     const getPlatformIcon = (platform: string) => {
