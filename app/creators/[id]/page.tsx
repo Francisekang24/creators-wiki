@@ -8,7 +8,8 @@ import { Globe, Youtube, Twitch, Instagram, Twitter, Calendar, MapPin, Flag } fr
 import Link from "next/link"
 import Image from "next/image"
 
-import { creators } from "@/lib/mockData"
+import { creators } from "@/data/mockData"
+import getPlatformIcon from "@/components/getPlatformIcon"
 
 export default function CreatorProfilePage({ params }: { params: { id: string } }) {
 
@@ -16,21 +17,6 @@ export default function CreatorProfilePage({ params }: { params: { id: string } 
     const creator = creators.find((creator) => creator.id === params.id)
     if (!creator) {
         return <div className="container mx-auto py-6">Creator not found</div>
-    }
-
-    const getPlatformIcon = (platform: string) => {
-        switch (platform) {
-            case "youtube":
-                return <Youtube className="h-5 w-5 text-red-500" />
-            case "twitch":
-                return <Twitch className="h-5 w-5 text-purple-500" />
-            case "instagram":
-                return <Instagram className="h-5 w-5 text-pink-500" />
-            case "twitter":
-                return <Twitter className="h-5 w-5 text-blue-500" />
-            default:
-                return <Globe className="h-5 w-5" />
-        }
     }
 
     return (

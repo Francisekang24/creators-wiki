@@ -9,7 +9,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Header from "@/components/Header"
 
-import { creators } from "@/lib/mockData"
+import { creators } from "@/data/mockData"
 
 export default function CreatorsPage() {
 
